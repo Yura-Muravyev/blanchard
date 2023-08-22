@@ -114,15 +114,37 @@ textarea {
 }
 
 .title {
+  margin-bottom: 16px;
+  font-family: "OpenSans";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--carbon);
 }
 
-.subtitle {
+.card-title {
+  font-family: "OpenSans";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--carbon);
 }
 
 .descr {
+  max-width: 1080px;
+  font-family: "OpenSans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--carbon);
 }
 
 .subdescr {
+  font-family: "OpenSans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--basalt-grey);
 }
 
 /* ================================== GLOBAL ========================================== */
@@ -218,6 +240,141 @@ textarea {
 
 /* ------------------------ HERO ------------------------*/
 
+/* ------------------------ ABOUT ------------------------*/
+.about {
+  margin-bottom: 70px;
+}
+/* ------------------------ ABOUT ------------------------*/
+
+/* ------------------------ GALLERY ------------------------*/
+.gallery {
+  background-image: url("../img/gallery/bg__gallery__1920.jpg");
+}
+
+.gallery__title {
+  margin-bottom: 20px;
+  padding-top: 80px;
+  color: var(--white);
+}
+
+.gallery-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 75px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+
+.custom-checkbox {
+  user-select: none;
+  cursor: pointer;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  appearance: none;
+}
+
+.custom-checkbox__text {
+  position: relative;
+  padding-left: 22px;
+  font-family: "OpenSans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--white);
+}
+
+.custom-checkbox__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--white);
+  transform: translateY(-50%);
+}
+
+.custom-checkbox__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  background-image: url("../img/check_dot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__text::after {
+  opacity: 1;
+}
+
+.gallery-pic__list {
+  display: flex;
+  gap: 45px;
+}
+
+/* ------------------------ GALLERy ------------------------*/
+
+/* ------------------------ CATALOG ------------------------*/
+
+.catalog__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  margin-bottom: 50px;
+}
+
+.catalog__descr {
+  margin-bottom: 40px;
+}
+
+.catalog__img {
+  margin-left: -5px;
+}
+
+.catalog__inner {
+  padding-top: 120px;
+}
+
+.catalog__inner-title {
+  margin-bottom: 5px;
+}
+
+.catalog__inner-subdescr {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* ------------------------ CATALOG ------------------------*/
+
+@media (max-width: 1700px) {
+  .gallery-wrapper {
+    flex-direction: column;
+  }
+
+  .checkbox-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .gallery-pic__list {
+    justify-content: space-between;
+  }
+}
+
+/* ------------------------ GALLERY ------------------------*/
 @media (max-width: 1440px) {
   /* ------------------------ HEADER ------------------------*/
 
@@ -273,6 +430,32 @@ textarea {
     max-width: 314px;
   }
   /* ------------------------ HERO ------------------------*/
+
+  /* ------------------------ GALLERY ------------------------*/
+  .gallery__title {
+    margin-bottom: 15px;
+  }
+
+  .checkbox-wrapper {
+    margin-bottom: 25px;
+  }
+
+  /* ------------------------ GALLERY ------------------------*/
+
+  /* ------------------------ CATALOG ------------------------*/
+  .catalog__item {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .catalog__inner {
+    padding-top: 0;
+  }
+
+  .catalog__inner-title {
+    margin-bottom: 8px;
+  }
+  /* ------------------------ CATALOG ------------------------*/
 }
 
 @media (max-width: 768px) {
@@ -295,9 +478,45 @@ textarea {
   }
 
   /* ------------------------ HERO ------------------------*/
+
+  /* ------------------------ GALLERY ------------------------*/
+
+  .gallery-pic__list {
+    gap: 34px;
+  }
+
+  /* ------------------------ GALLERY ------------------------*/
+
+  /* ------------------------ GALLERY ------------------------*/
+  .catalog__item {
+    gap: 32px;
+  }
+
+  .catalog__inner-subdescr {
+    margin-bottom: 5px;
+  }
+  /* ------------------------ GALLERY ------------------------*/
 }
 
 @media (max-width: 650px) {
+  /* GLOBAL */
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+  .descr {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  /* GLOBAL */
+
   /* ------------------------ HEADER ------------------------*/
 
   .header {
@@ -338,7 +557,6 @@ textarea {
   /* ------------------------ HERO ------------------------*/
   .hero__inner {
     padding-top: 50px;
-    max-width: 500px;
     align-items: center;
   }
 
@@ -366,4 +584,55 @@ textarea {
     line-height: normal;
   }
   /* ------------------------ HERO ------------------------*/
+
+  /* ------------------------ ABOUT ------------------------*/
+
+  .about {
+    margin-bottom: 42px;
+  }
+
+  .about__descr {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  /* ------------------------ ABOUT ------------------------*/
+
+  /* ------------------------ GALLERY ------------------------*/
+
+  .gallery {
+    margin-bottom: 50px;
+  }
+
+  .gallery-wrapper {
+    padding-bottom: 45px;
+  }
+
+  .gallery__title {
+    padding-top: 50px;
+  }
+
+  .gallery-pic__list {
+    flex-direction: column;
+    gap: 26px;
+  }
+  /* ------------------------ GALLERY ------------------------*/
+
+  /* ------------------------ CATALOG ------------------------*/
+
+  .catalog__item {
+    gap: 0px;
+    margin-bottom: 30px;
+  }
+
+  .catalog__img {
+    margin-bottom: 19px;
+  }
+
+  .catalog__inner-subdescr {
+    margin-bottom: 13px;
+  }
+  .catalog__descr {
+    margin-bottom: 30px;
+  }
+  /* ------------------------ CATALOG ------------------------*/
 }
