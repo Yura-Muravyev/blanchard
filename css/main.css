@@ -326,7 +326,7 @@ textarea {
   gap: 45px;
 }
 
-/* ------------------------ GALLERy ------------------------*/
+/* ------------------------ GALLERY ------------------------*/
 
 /* ------------------------ CATALOG ------------------------*/
 
@@ -373,8 +373,40 @@ textarea {
     justify-content: space-between;
   }
 }
+/* ------------------------ CATALOG ------------------------*/
 
-/* ------------------------ GALLERY ------------------------*/
+/* ------------------------ CATALOG ------------------------*/
+
+.events__list {
+  display: flex;
+  gap: 43px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+}
+
+.event__img {
+  margin-bottom: 13px;
+  max-width: none;
+}
+
+.event__inner {
+  padding-left: 50px;
+}
+
+.event__subdescr {
+  display: block;
+}
+
+.event__subdescr-wrapper {
+  margin-bottom: 13px;
+}
+
+/* ------------------------ CATALOG ------------------------*/
+
 @media (max-width: 1440px) {
   /* ------------------------ HEADER ------------------------*/
 
