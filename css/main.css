@@ -147,6 +147,15 @@ textarea {
   color: var(--basalt-grey);
 }
 
+.logo {
+  margin-right: 11.3%;
+  width: 10.6%;
+}
+
+.feedback-form__btn-sbt--small {
+  display: none;
+}
+
 /* ================================== GLOBAL ========================================== */
 
 /* ------------------------ HEADER ------------------------*/
@@ -154,11 +163,6 @@ textarea {
 .header {
   padding: 30px 0;
   background-color: var(--black);
-}
-
-.header__logo {
-  margin-right: 11.3%;
-  width: 10.6%;
 }
 
 .nav {
@@ -425,11 +429,20 @@ textarea {
 /* ------------------------ PROJECTS ------------------------*/
 
 .projects {
+  margin-bottom: 35px;
   border-bottom: 1px solid var(--leadbelcher);
 }
 
+.projects__title {
+  margin-bottom: 16px;
+}
+
 .projects__descr {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
+}
+
+.partner {
+  padding-bottom: 80px;
 }
 
 .partners__list {
@@ -450,13 +463,100 @@ textarea {
 /* ------------------------ PROJECTS ------------------------*/
 
 /* ------------------------ FEEDBACK ------------------------*/
+
+.feedback {
+  margin-bottom: 33px;
+}
 .feedback__container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 25px 80px;
+}
+
+.feedback-form {
+  display: flex;
+  gap: 20px;
+}
+
+.address__point {
+  font-family: "OpenSans";
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--carbon);
+}
+
+.feedback-form__input {
+  padding: 15px 38px;
+  border-radius: 100px;
+  border: 1px solid var(--carbon);
+  cursor: pointer;
+}
+
+.feedback-form__input::placeholder {
+  transform: translateX(-20px) translateY(-2px);
+}
+
+.feedback-form__btn-sbt {
+  padding: 9px 35px;
+  background-color: transparent;
+  text-align: center;
+  font-family: "OpenSans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--ripe-lavander);
+  border: 2px solid var(--ripe-lavander);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.messengers {
+  margin-left: -5px;
+}
+
+.messengers-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.messengers__title {
+  margin-bottom: 8px;
+  font-family: "OpenSans";
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--carbon);
+}
+
+.messengers__link {
+  display: block;
+  width: fit-content;
+}
+
+.messengers__link:not(:last-child) {
+  margin-right: 15px;
 }
 
 /* ------------------------ FEEDBACK ------------------------*/
+
+/* ------------------------ FOOTER ------------------------*/
+.footer {
+  background-color: var(--black);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.messengers__icon--vk,
+.messengers__icon--ok {
+  width: 45px;
+}
+
+/* ------------------------ FOOTER ------------------------*/
 
 @media (max-width: 1700px) {
   .gallery-wrapper {
@@ -471,7 +571,10 @@ textarea {
     justify-content: space-between;
   }
 }
-/* ------------------------ CATALOG ------------------------*/
+
+/* ------------------------ FEEDBACK ------------------------*/
+
+/* ------------------------ FEEDBACK ------------------------*/
 
 @media (max-width: 1440px) {
   /* ------------------------ HEADER ------------------------*/
@@ -493,7 +596,7 @@ textarea {
     display: none;
   }
 
-  .header__logo {
+  .logo {
     margin-right: 0;
     width: 20.3%;
   }
@@ -586,12 +689,63 @@ textarea {
   }
 
   /* ------------------------ EVENTS ------------------------*/
+
+  /* ------------------------ PROJECTS ------------------------*/
+
+  .projects {
+    margin-bottom: 40px;
+  }
+  .projects__title {
+    margin-bottom: 20px;
+  }
+
+  .projects__descr {
+    margin-bottom: 20px;
+  }
+
+  /* ------------------------ PROJECTS ------------------------*/
+
+  /* ------------------------ FEEDBACK ------------------------*/
+  .feedback {
+    margin-bottom: 40px;
+  }
+  .feedback-form {
+    flex-wrap: wrap;
+  }
+  .address__title {
+    margin-bottom: 5px;
+  }
+
+  .feedback-form__input {
+    padding: 15px 40px;
+  }
+
+  .feedback-form__btn-sbt {
+    padding: 10px 42px;
+  }
+
+  .messengers {
+    margin-left: 0;
+  }
+  .messengers__link:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .messengers__icon--vk,
+  .messengers__icon--ok {
+    width: 60px;
+  }
+  /* ------------------------ FEEDBACK ------------------------*/
+
+  .footer__logo {
+    width: 19%;
+  }
 }
 
 @media (max-width: 768px) {
   /* ------------------------ HEADER ------------------------*/
 
-  .header__logo {
+  .logo {
     width: 28.3%;
   }
 
@@ -648,6 +802,46 @@ textarea {
   }
 
   /* ------------------------ EVENTS ------------------------*/
+  /* ------------------------ PROJECTS ------------------------*/
+
+  .projects__descr {
+    margin-bottom: 27px;
+  }
+  .partners__title {
+    margin-bottom: 30px;
+  }
+  /* ------------------------ PROJECTS ------------------------*/
+  /* ------------------------ FEEDBACK ------------------------*/
+
+  .feedback {
+    margin-bottom: 38px;
+  }
+  .feedback-form {
+    gap: 12px 20px;
+    margin-bottom: 5px;
+  }
+
+  .feedback-form__input {
+    padding: 15px 67px;
+  }
+
+  .feedback-form__input::placeholder {
+    transform: translateX(-42px) translateY(-2px);
+  }
+
+  .feedback-form__btn-sbt {
+    padding: 10px 28px;
+  }
+
+  .messengers__icon--whatsapp,
+  .messengers__icon--telegram {
+    width: 40px;
+  }
+  /* ------------------------ FEEDBACK ------------------------*/
+
+  .footer__logo {
+    width: 26.3%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -684,7 +878,7 @@ textarea {
     margin-bottom: 10px;
   }
 
-  .header__logo {
+  .logo {
     width: 33.3%;
   }
 
@@ -823,4 +1017,108 @@ textarea {
   }
 
   /* ------------------------ EVENTS ------------------------*/
+  /* ------------------------ PROJECTS ------------------------*/
+  .projects {
+    margin-bottom: -2px;
+  }
+  .projects__descr {
+    margin-bottom: 18px;
+  }
+  /* ------------------------ PROJECTS ------------------------*/
+  /*------------------------ partner ------------------------*/
+
+  .partners__title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .partners__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .partner {
+    padding-bottom: 0;
+  }
+
+  .partner:last-child {
+    padding-bottom: 50px;
+  }
+
+  .partner__link {
+    padding: 28px 65px;
+  }
+
+  .partner_logo {
+    max-width: 160px;
+  }
+
+  /* ------------------------ partner ------------------------*/
+
+  /* ------------------------ FEEDBACK ------------------------*/
+  .feedback {
+    margin-bottom: 32px;
+  }
+  .feedback__container {
+    gap: 12px 80px;
+  }
+
+  .address__title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .address__point {
+    font-size: 14px;
+  }
+  .feedback-form {
+    gap: 20px 20px;
+  }
+  .feedback-form__input {
+    padding: 10px 50px;
+  }
+
+  .feedback-form__input::placeholder {
+    transform: translateX(-28px) translateY(0);
+  }
+
+  .feedback-form__btn-sbt {
+    display: none;
+  }
+  .feedback-form__btn-sbt--small {
+    display: block;
+    padding: 10px 33px;
+    font-size: 12px;
+  }
+
+  .messengers__title {
+    font-size: 18px;
+  }
+
+  .messengers__icon--whatsapp,
+  .messengers__icon--telegram {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* ------------------------ FEEDBACK ------------------------*/
+  /* ------------------------ FOOTER ------------------------*/
+
+  .footer__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .messengers-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .messengers__icon--vk,
+  .messengers__icon--ok {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* ------------------------ FOOTER ------------------------*/
 }
